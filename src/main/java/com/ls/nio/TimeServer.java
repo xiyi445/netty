@@ -21,12 +21,10 @@ public static void main(String[] args) {
 }
 
 class TimeServerNIO implements Runnable{
-	private int port ;
 	private Selector select ;
 	private boolean stop;
 	private ServerSocketChannel channel;
 	public TimeServerNIO(int port){
-		this.port = port;
 		try {
 			select = Selector.open();
 			channel =ServerSocketChannel.open();
